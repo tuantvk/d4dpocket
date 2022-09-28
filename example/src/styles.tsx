@@ -26,4 +26,10 @@ export default StyleSheet.create({
     marginRight: scale(10),
     backgroundColor: '#51a1c4',
   },
+  button: {
+    backgroundColor: '#51a1c4',
+    paddingVertical: scale(8),
+    paddingHorizontal: scale(25),
+    borderRadius: scale(5),
+  },
 });

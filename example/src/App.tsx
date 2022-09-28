@@ -1,5 +1,12 @@
 import React from 'react';
-import { View, SafeAreaView, ScrollView, Text, Dimensions } from 'react-native';
+import {
+  View,
+  SafeAreaView,
+  ScrollView,
+  Text,
+  Dimensions,
+  TouchableOpacity,
+} from 'react-native';
 
 import Row from './Row';
 import styles from './styles';
@@ -28,6 +35,9 @@ const App = () => {
         <Row title="scale" style={styles.row}>
           <View style={styles.scale} />
           <View style={styles.scale} />
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.text}>Button</Text>
+          </TouchableOpacity>
         </Row>
       </ScrollView>
     </SafeAreaView>
