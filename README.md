@@ -45,7 +45,7 @@ height: hScale(100)
 ```
 
 ### RFValue
-Use for font size
+Use for size, fontSize
 ```js
 fontSize: RFValue(16)
 ```
@@ -170,6 +170,30 @@ File `change-[dev].sh` generated in root project
 Run
 ```sh
 bash change-dev.sh
+```
+
+### src/scripts/checkInfoPlist.sh
+Check file `Info.plist` when release app on App Store
+
+Run
+```sh
+bash node_modules/d4dpocket/src/scripts/checkInfoPlist.sh
+
+# Do you used Camera? (y/n) y
+# Do you used Photo Library? (y/n) y
+# Do you used Location Always And When In Use? (y/n) y
+# Results:
+# +----+----------------------------------------------+
+# | ❌ | NSAppleMusicUsageDescription
+# |---------------------------------------------------|
+# | ❌ | NSUserTrackingUsageDescription
+# |---------------------------------------------------|
+# | ❌ | NSCameraUsageDescription 
+# |---------------------------------------------------|
+# | ❌ | NSPhotoLibraryUsageDescription 
+# |---------------------------------------------------|
+# | ❌ | NSLocationAlwaysAndWhenInUseUsageDescription 
+# +----+----------------------------------------------+
 ```
 
 # Running the example app
