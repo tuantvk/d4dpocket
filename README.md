@@ -91,7 +91,13 @@ if (isTablet()) {
 ### isNewerVersion
 Compare software version
 ```js
-isNewerVersion('1.0.1', '1.0.10') // true
+isNewerVersion("1.0.1", "1.0.10") // true
+```
+
+### isUUID
+```js
+isUUID("9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d");
+// true
 ```
 
 ### toVnd
@@ -121,14 +127,34 @@ removeAccent("chấm và hỏi");
 // cham va hoi
 ```
 
+## Components
+
+### Button
+Inherits [TouchableOpacity](https://reactnative.dev/docs/next/touchableopacity)
+```jsx
+<Button>Button</Button>
+```
+
+### KeyboardSpacer
+Inherits [react-native-keyboard-spacer](https://github.com/Andr3wHur5t/react-native-keyboard-spacer)
+```jsx
+<KeyboardSpacer>{children}</KeyboardSpacer>
+```
+
+### ScrollView
+Inherits [ScrollView](https://reactnative.dev/docs/next/scrollview)
+```jsx
+<ScrollView>{children}</ScrollView>
+```
+
 ### src/scripts/createChangeEnv.js
 Generate file bash script change env
 ```sh
-node path_library/src/scripts/createChangeEnv.js 'env' 'app_name' 'package_name'
+node node_modules/d4dpocket/src/scripts/createChangeEnv.js 'env' 'app_name' 'package_name'
 ```
 Example
 ```sh
-node path_library/src/scripts/createChangeEnv.js 'dev' 'ABC' 'com.abc.dev'
+node node_modules/d4dpocket/src/scripts/createChangeEnv.js 'dev' 'ABC' 'com.abc.dev'
 ```
 File `change-[dev].sh` generated in root project
 

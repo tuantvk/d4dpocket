@@ -89,6 +89,6 @@ cat .env; echo`;
   });
 } else {
   console.log(
-    `Missing argv.\nEx: node path/scripts/createChangeEnv.js 'env' 'app_name' 'package_name'`
+    'Missing argv.\nEx: node path/scripts/createChangeEnv.js \'env\' \'app_name\' \'package_name\''
   );
 }
