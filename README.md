@@ -13,21 +13,8 @@ yarn add d4dpocket
 # Usage
 
 ```js
+// Example:
 import { isIphoneX } from 'd4dpocket';
-```
-
-### isIphoneX
-```js
-if (isIphoneX()) {
-  console.log("isIphoneX");
-}
-```
-
-### isTablet
-```js
-if (isTablet()) {
-  console.log("isTablet");
-}
 ```
 
 ### scale
@@ -76,6 +63,39 @@ const styles = StyleSheet.create({
     }),
   },
 });
+```
+
+### isIphoneX
+```js
+if (isIphoneX()) {
+  console.log("isIphoneX");
+}
+```
+
+### isTablet
+```js
+if (isTablet()) {
+  console.log("isTablet");
+}
+```
+
+### isNewerVersion
+Compare software version
+```js
+isNewerVersion('1.0.1', '1.0.10') // true
+```
+
+### toVnd
+Format string to Vnd
+```js
+toVnd("1000000"); // 1,000,000
+```
+
+### limitedString
+Default: `limitedString(string, maxLength = 9)`
+```js
+limitedString("Lorem Ipsum is simply dummy text of the printing and typesetting industry");
+// Lorem Ipsum is simply dummy text of the printing...
 ```
 
 ### src/scripts/createChangeEnv.js
