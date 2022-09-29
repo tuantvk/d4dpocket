@@ -4,6 +4,15 @@
 
 <h2 align="center">Doraemon's 4D Pocket for React Native</h2>
 
+<p align="center">
+  <a href="https://www.npmjs.com/package/d4dpocket"><img src="https://img.shields.io/npm/v/d4dpocket.svg?style=flat-square"></a>
+  <a href="https://github.com/tuantvk/d4dpocket"><img src="https://img.shields.io/github/stars/tuantvk/d4dpocket?style=flat-square"></a>
+  <a href="https://github.com/tuantvk/d4dpocket"><img src="https://img.shields.io/github/issues/tuantvk/d4dpocket?style=flat-square"></a>
+  <a href="https://github.com/tuantvk/d4dpocket"><img src="https://img.shields.io/github/forks/tuantvk/d4dpocket?style=flat-square"></a>
+  <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square"></a>
+</p>
+
 # Installation
 
 ```sh
