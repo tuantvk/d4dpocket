@@ -5,6 +5,8 @@ import isTablet from './utils/isTablet';
 import isNewerVersion from './utils/isNewerVersion';
 import toVnd from './utils/toVnd';
 import limitedString from './utils/limitedString';
+import formatComma from './utils/formatComma';
+import removeAccent from './utils/removeAccent';
 
 export {
   scale,
@@ -17,4 +19,6 @@ export {
   isNewerVersion,
   toVnd,
   limitedString,
+  formatComma,
+  removeAccent,
 };

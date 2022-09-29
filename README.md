@@ -22,7 +22,7 @@ yarn add d4dpocket
 # Usage
 
 ```js
-// Example:
+// Example
 import { isIphoneX } from 'd4dpocket';
 ```
 
@@ -107,14 +107,34 @@ limitedString("Lorem Ipsum is simply dummy text of the printing and typesetting 
 // Lorem Ipsum is simply dummy text of the printing...
 ```
 
+### formatComma
+Default: `formatComma(string, toFixed = 2)`
+```js
+formatComma("100000");
+// 100,000
+```
+
+### removeAccent
+Remove accent in vietnamese
+```js
+removeAccent("chấm và hỏi");
+// cham va hoi
+```
+
 ### src/scripts/createChangeEnv.js
-Create bash script change env
+Generate file bash script change env
 ```sh
 node path_library/src/scripts/createChangeEnv.js 'env' 'app_name' 'package_name'
 ```
-Example:
+Example
 ```sh
 node path_library/src/scripts/createChangeEnv.js 'dev' 'ABC' 'com.abc.dev'
+```
+File `change-[dev].sh` generated in root project
+
+Run
+```sh
+bash change-dev.sh
 ```
 
 # Running the example app
