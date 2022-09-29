@@ -1,7 +1,7 @@
 {
   "name": "d4dpocket",
-  "version": "0.1.0",
-  "description": "test",
+  "version": "0.1.1",
+  "description": "Doraemon's 4D Pocket for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -33,7 +33,8 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "d4dpocket"
   ],
   "repository": "https://github.com/tuantvk/d4dpocket",
   "author": "tuantvk <tuanhanhphuc123@gmail.com> (https://github.com/tuantvk)",

@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="assets/d4dpocket.png" alt="d4dpocket" style="width:300px" />
+  <img src="assets/d4dpocket.png" alt="d4dpocket" style="width:320px" />
 <p>
 
-<h2 align="center">Doraemon's 4D Pocket</h2>
+<h2 align="center">Doraemon's 4D Pocket for React Native</h2>
 
 # Installation
 
