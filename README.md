@@ -156,7 +156,29 @@ Inherits [Image](https://reactnative.dev/docs/next/images)
 />
 ```
 
-### src/scripts/createChangeEnv.js
+### init.sh
+Create default folders and file in project
+
+Reset default style `Text`, `TextInput` in `root/index.js`
+```sh
+# root
+#     /src/actions/index.js
+#     /src/components/index.js
+#     /src/context/index.js
+#     /src/hooks/index.js
+#     /src/icons/index.js
+#     /src/store/index.js
+#     /src/themes/index.js
+#                /colors.js
+#                /fontSize.js
+#     /src/utils/index.js
+#     .env
+```
+```sh
+bash node_modules/d4dpocket/src/scripts/init.sh
+```
+
+### createChangeEnv.js
 Generate file bash script change env
 ```sh
 node node_modules/d4dpocket/src/scripts/createChangeEnv.js 'env' 'app_name' 'package_name'
@@ -172,7 +194,7 @@ Run
 bash change-dev.sh
 ```
 
-### src/scripts/checkInfoPlist.sh
+### checkInfoPlist.sh
 Check file `Info.plist` when release app on App Store
 
 Run
