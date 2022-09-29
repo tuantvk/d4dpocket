@@ -1,9 +1,8 @@
-# d4dpocket
-<h2 align="center">Doraemon's 4D Pocket</h2>
-
 <p align="center">
   <img src="assets/d4dpocket.png" alt="d4dpocket" style="width:300px" />
 <p>
+
+<h2 align="center">Doraemon's 4D Pocket</h2>
 
 # Installation
 
@@ -89,6 +88,16 @@ Example:
 node path_library/src/scripts/createChangeEnv.js 'dev' 'ABC' 'com.abc.dev'
 ```
 
+# Running the example app
+
+1. Run `yarn` in repo root
+2. Run `yarn example android` or `yarn example ios`
+3. Run `yarn example start` to start Metro Bundler
+
+# Contributing
+
+See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
+
 # License
 
-MIT
+[MIT](LICENSE)
