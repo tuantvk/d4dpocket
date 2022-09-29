@@ -138,13 +138,22 @@ Inherits [TouchableOpacity](https://reactnative.dev/docs/next/touchableopacity)
 ### KeyboardSpacer
 Inherits [react-native-keyboard-spacer](https://github.com/Andr3wHur5t/react-native-keyboard-spacer)
 ```jsx
-<KeyboardSpacer>{children}</KeyboardSpacer>
+<KeyboardSpacer />
 ```
 
 ### ScrollView
 Inherits [ScrollView](https://reactnative.dev/docs/next/scrollview)
 ```jsx
 <ScrollView>{children}</ScrollView>
+```
+
+### ImageAspectRatio
+Inherits [Image](https://reactnative.dev/docs/next/images)
+```jsx
+<ImageAspectRatio
+  source={{ uri: 'https://exmaple.com/image.png' }}
+  style={{ width: 100, height: 100 }}
+/>
 ```
 
 ### src/scripts/createChangeEnv.js

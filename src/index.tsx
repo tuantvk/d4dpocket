@@ -13,6 +13,7 @@ import removeAccent from './utils/removeAccent';
 import Button from './components/Button';
 import KeyboardSpacer from './components/KeyboardSpacer';
 import ScrollView from './components/ScrollView';
+import ImageAspectRatio from './components/ImageAspectRatio';
 
 export {
   scale,
@@ -32,4 +33,5 @@ export {
   Button,
   KeyboardSpacer,
   ScrollView,
+  ImageAspectRatio,
 };
