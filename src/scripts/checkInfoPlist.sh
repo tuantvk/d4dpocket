@@ -1,72 +1,53 @@
 #!/bin/bash
 # ===== iOS =====
 
-missing="\e[91m\u274c\e[0m"
-check="\e[92m\u2714\e[0m"
-
-InfoPlist=`find "$(pwd)/ios/" -iname Info.plist`;
-
-# required
-AppleMusic="NSAppleMusicUsageDescription"
-UserTracking="NSUserTrackingUsageDescription"
-
-# options
-Camera="NSCameraUsageDescription"
-LAAWIU="NSLocationAlwaysAndWhenInUseUsageDescription"
-LocationAlways="NSLocationAlwaysUsageDescription"
-LocationWhenInUse="NSLocationWhenInUseUsageDescription"
-PhotoLibrary="NSPhotoLibraryUsageDescription"
-
 read -r -p "Do you used Camera? (y/n) " r_camera
 read -r -p "Do you used Photo Library? (y/n) " r_photo_library
 read -r -p "Do you used Location Always And When In Use? (y/n) " r_location
 
-CurrentAppleMusic=$(cat $InfoPlist \
-  | grep $AppleMusic \
-  | head -1 \
-	| sed 's/<\/\?[^>]\+>//g' )
-CurrentUserTracking=$(cat $InfoPlist \
-  | grep $UserTracking \
-  | head -1 \
-	| sed 's/<\/\?[^>]\+>//g' )
-IsAppleMusic=$missing
-IsUserTracking=$missing
-[[ $AppleMusic == $CurrentAppleMusic ]] && IsAppleMusic=$check;
-[[ $UserTracking == $CurrentUserTracking ]] && IsUserTracking=$check;
+infoPlist=`find "$(pwd)/ios/" -iname Info.plist`;
 
+compare() {
+	current=$(cat $infoPlist \
+		| grep $1 \
+		| head -1 \
+		| sed 's/<\/\?[^>]\+>//g' )
+	if [[ -n $current ]]; then
+		if [ $1 = $current ]; then
+			echo "\e[92m\u2714\e[0m "
+		else
+			echo "\e[91m\u274c\e[0m"
+		fi
+	else
+		echo "\e[91m\u274c\e[0m"
+	fi
+}
+
+# required
+isAppleMusic=$(compare "NSAppleMusicUsageDescription")
+isUserTracking=$(compare "NSUserTrackingUsageDescription")
 printf "Results:
 +----+----------------------------------------------+
-| $IsAppleMusic | $AppleMusic
+| $isAppleMusic | NSAppleMusicUsageDescription
 |---------------------------------------------------|
-| $IsUserTracking | $UserTracking
+| $isUserTracking | NSUserTrackingUsageDescription
 "
 
+# options
 if [[ $r_camera =~ ^[Yy]$ ]]; then
-	CurrentCamera=$(cat $InfoPlist \
-		| grep $Camera \
-		| head -1 \
-		| sed 's/<\/\?[^>]\+>//g' )
 	printf "|---------------------------------------------------|\n"
-	[[ $Camera == $CurrentCamera ]] && IsCamera=$check || IsCamera=$missing
-	printf "| $IsCamera | $Camera \n"
+	isCamera=$(compare "NSCameraUsageDescription")
+	printf "| $isCamera | NSCameraUsageDescription \n"
 fi
 if [[ $r_photo_library =~ ^[Yy]$ ]]; then
-	CurrentPhotoLibrary=$(cat $InfoPlist \
-		| grep $PhotoLibrary \
-		| head -1 \
-		| sed 's/<\/\?[^>]\+>//g' )
 	printf "|---------------------------------------------------|\n"
-	[[ $PhotoLibrary == $CurrentPhotoLibrary ]] && IsPhotoLibrary=$check || IsPhotoLibrary=$missing
-	printf "| $IsPhotoLibrary | $PhotoLibrary \n"
+	isPhotoLibrary=$(compare "NSPhotoLibraryUsageDescription")
+	printf "| $isPhotoLibrary | NSPhotoLibraryUsageDescription \n"
 fi
 if [[ $r_location =~ ^[Yy]$ ]]; then
-	CurrentLAAWIU=$(cat $InfoPlist \
-		| grep $LAAWIU \
-		| head -1 \
-		| sed 's/<\/\?[^>]\+>//g' )
 	printf "|---------------------------------------------------|\n"
-	[[ $LAAWIU == $CurrentLAAWIU ]] && IsLAAWIU=$check || IsLAAWIU=$missing
-	printf "| $IsLAAWIU | $LAAWIU \n"
+	isLAAWIU=$(compare "NSLocationAlwaysAndWhenInUseUsageDescription")
+	printf "| $isLAAWIU | NSLocationAlwaysAndWhenInUseUsageDescription \n"
 fi
 
 printf "+----+----------------------------------------------+\n"
