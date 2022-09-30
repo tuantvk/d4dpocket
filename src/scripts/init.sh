@@ -1,3 +1,4 @@
+#!/bin/bash
 _pwd=`pwd`
 
 mkdir -p "$_pwd/documents"

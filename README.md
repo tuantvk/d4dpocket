@@ -91,7 +91,8 @@ if (isTablet()) {
 ### isNewerVersion
 Compare software version
 ```js
-isNewerVersion("1.0.1", "1.0.10") // true
+// isNewerVersion(oldVer, newVer)
+isNewerVersion("1.0.1", "1.0.10"); // true
 ```
 
 ### isUUID
@@ -221,6 +222,14 @@ bash node_modules/d4dpocket/src/scripts/checkInfoPlist.sh
 # |---------------------------------------------------|
 # | ❌ | NSLocationAlwaysAndWhenInUseUsageDescription 
 # +----+----------------------------------------------+
+```
+
+### usePaging
+Generate file `usePaging.js` in `src/hooks`
+
+Run
+```
+bash node_modules/d4dpocket/src/scripts/usePaging.sh
 ```
 
 # Running the example app
