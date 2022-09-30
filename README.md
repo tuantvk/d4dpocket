@@ -162,10 +162,14 @@ Create default folders and file in project
 Reset default style `Text`, `TextInput` in `root/index.js`
 ```sh
 # root
+#     /documents
 #     /src/actions/index.js
 #     /src/components/index.js
 #     /src/context/index.js
 #     /src/hooks/index.js
+#     /src/screens
+#                 /AppNavigator.js
+#                 /routes.js
 #     /src/icons/index.js
 #     /src/store/index.js
 #     /src/themes/index.js
@@ -174,6 +178,7 @@ Reset default style `Text`, `TextInput` in `root/index.js`
 #     /src/utils/index.js
 #     .env
 ```
+Run
 ```sh
 bash node_modules/d4dpocket/src/scripts/init.sh
 ```
