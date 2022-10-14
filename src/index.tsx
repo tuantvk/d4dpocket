@@ -1,5 +1,7 @@
 import { scale, hScale, wScale, RFValue } from './utils/resolutions';
 import StylePlatforms from './utils/StylePlatforms';
+import isIphone from './utils/isIphone';
+import hasIsland from './utils/hasIsland';
 import isIphoneX from './utils/isIphoneX';
 import isTablet from './utils/isTablet';
 import isNewerVersion from './utils/isNewerVersion';
@@ -21,6 +23,8 @@ export {
   wScale,
   RFValue,
   StylePlatforms,
+  isIphone,
+  hasIsland,
   isIphoneX,
   isTablet,
   isNewerVersion,

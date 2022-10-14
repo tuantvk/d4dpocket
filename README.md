@@ -74,6 +74,20 @@ const styles = StyleSheet.create({
 });
 ```
 
+### isIphone
+```js
+if (isIphone()) {
+  console.log("isIphone");
+}
+```
+
+### hasIsland
+```js
+if (hasIsland()) {
+  console.log("hasIsland");
+}
+```
+
 ### isIphoneX
 ```js
 if (isIphoneX()) {
