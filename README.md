@@ -82,6 +82,7 @@ if (isIphone()) {
 ```
 
 ### hasIsland
+Support iPhone 14 Pro & Pro Max. View more [react-native-iphone-x-helper/pull/44](https://github.com/ptelad/react-native-iphone-x-helper/pull/44)
 ```js
 if (hasIsland()) {
   console.log("hasIsland");
