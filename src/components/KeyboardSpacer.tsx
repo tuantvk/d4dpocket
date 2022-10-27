@@ -89,7 +89,7 @@ export default class KeyboardSpacer extends Component<IProps, IState> {
         keyboardSpace,
         isKeyboardOpened: true,
       },
-      () => this.props.onToggle(true, keyboardSpace)
+      () => this.props?.onToggle(true, keyboardSpace)
     );
   }
 
@@ -109,7 +109,7 @@ export default class KeyboardSpacer extends Component<IProps, IState> {
         keyboardSpace: 0,
         isKeyboardOpened: false,
       },
-      () => this.props.onToggle(false, 0)
+      () => this.props?.onToggle(false, 0)
     );
   }
 
