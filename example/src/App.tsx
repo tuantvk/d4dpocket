@@ -6,7 +6,9 @@ import {
   Text,
   Dimensions,
   TouchableOpacity,
+  TextInput,
 } from 'react-native';
+import { KeyboardSpacer } from 'd4dpocket';
 
 import Row from './Row';
 import styles from './styles';
@@ -39,6 +41,8 @@ const App = () => {
             <Text style={styles.text}>Button</Text>
           </TouchableOpacity>
         </Row>
+        <TextInput placeholder='Placeholder here...' />
+        <KeyboardSpacer />
       </ScrollView>
     </SafeAreaView>
   );

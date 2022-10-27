@@ -28,7 +28,7 @@ const defaultAnimation: LayoutAnimationConfig = {
 
 type IProps = {
   topSpacing: number;
-  onToggle(keyboardState: boolean, keyboardSpace: number): void;
+  onToggle?(keyboardState: boolean, keyboardSpace: number): void;
 } & ViewProps;
 
 interface IState {
@@ -89,7 +89,7 @@ export default class KeyboardSpacer extends Component<IProps, IState> {
         keyboardSpace,
         isKeyboardOpened: true,
       },
-      () => this.props?.onToggle(true, keyboardSpace)
+      () => this.props.onToggle && this.props.onToggle(true, keyboardSpace)
     );
   }
 
@@ -109,7 +109,7 @@ export default class KeyboardSpacer extends Component<IProps, IState> {
         keyboardSpace: 0,
         isKeyboardOpened: false,
       },
-      () => this.props?.onToggle(false, 0)
+      () => this.props.onToggle && this.props.onToggle(false, 0)
     );
   }
 
